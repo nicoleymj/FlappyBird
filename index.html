@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlappyBird</title>
+</head>
+<body>
+<canvas id="cvs" width="800" height="600" style="border: 1px solid black;"></canvas>
+<script src="./seajs/2.2.0/sea.js"></script>
+<!--<script src="load_imgs.js"></script>-->
+<!--<script src="bird.js"></script>-->
+<!--<script src="sky.js"></script>-->
+<!--<script src="land.js"></script>-->
+<!--<script src="pipe.js"></script>-->
+<script>
+
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+
+    seajs.use("./load_imgs",function(loadObj){
+        loadObj.load(cvs,ctx);
+    });
+
+</script>
+</body>
+</html>
